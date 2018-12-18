@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文章内容 article</title>
+</head>
+<body>
+<h1>{{ article.title }}</h1>
+<h4>{{ article.pubtime }}</h4>
+<br/><br/>
+<h3>{{ article.content }}</h3>
+<br/><br/>
+<a href="{% url 'ytblog:edit_page' article.id %}">点击编辑</a>
+</body>
+</html>

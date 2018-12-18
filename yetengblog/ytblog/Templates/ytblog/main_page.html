@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page 文章首页</title>
+</head>
+<body>
+<h1><a href="{% url 'ytblog:edit_page' 0 %}">新文章</a></h1>
+<br/><br/>
+{% for article in articles %}
+    <h3>
+        <a href="{% url 'ytblog:article_page' article.id  %}">{{ article.title }}</a>
+    </h3>
+{% endfor %}
+</body>
+</html>
